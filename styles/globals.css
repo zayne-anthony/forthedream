@@ -1,36 +1,49 @@
-@import "./prebuilt.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-	@apply scroll-smooth;
-
-	::-webkit-scrollbar {
-		@apply w-2;
-	}
-
-	::-webkit-scrollbar-track {
-		@apply bg-transparent;
-	}
-
-	::-webkit-scrollbar-thumb {
-		@apply bg-white;
-	}
-
-	::-webkit-scrollbar-thumb:hover {
-		@apply bg-gray-200;
-	}
+	@apply scroll-smooth font-mont;
 }
 
 body {
-	@apply bg-gray-100 overflow-x-hidden;
+	@apply overflow-x-hidden;
 }
 
-p {
-	@apply max-w-[75ch] mb-4 last:mb-0;
+h1 {
+	@apply font-bold uppercase tracking-widest md:text-8xl text-7xl mb-6;
+}
+
+h2 {
+	@apply font-bold uppercase tracking-widest md:text-8xl text-7xl mb-6;
+}
+
+a {
+	@apply transition-all duration-300;
+}
+
+.header {
+	@apply overflow-hidden bg-cover justify-center items-center flex flex-col bg-no-repeat bg-right-bottom h-screen relative bg-[url(/imgs/header-bg.jpg)];
+
+	&-img {
+		@apply absolute drop-shadow-md;
+	}
 }
 
 .flex-center {
 	@apply flex justify-center items-center;
+}
+
+.social-icon {
+	@apply text-5xl hover:scale-110 drop-shadow-solid;
+
+	svg {
+		@apply stroke-[0.35em] stroke-black;
+	}
+}
+
+.outline-text {
+	/* -webkit-text-stroke: 1px black; */
+	text-shadow: 5px 5px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+		-1px 1px 0 #000, 1px 1px 0 #000;
 }

@@ -9,21 +9,15 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				primary: "#FFFFFF",
+				primary: "#ffe187",
 			},
 			fontFamily: {
 				mont: ["Montserrat", "sans-serif"],
 			},
-			boxShadow: {
-				solid: "0 0.25em 0 0 rgba(0,0,0,100)",
-			},
 			dropShadow: {
-				solid: "0 0.25em 0 rgba(0,0,0,100)",
+				solid: "0.05em 0.05em 0 black",
 			},
 		},
-	},
-	variants: {
-		extend: {},
 	},
 	plugins: [],
 };
