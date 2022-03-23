@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-	@apply scroll-smooth font-mont;
+	@apply scroll-smooth font-cartoon;
 }
 
 body {
@@ -15,11 +15,15 @@ h1 {
 }
 
 h2 {
-	@apply font-bold uppercase tracking-widest md:text-8xl text-7xl mb-6;
+	@apply font-bold outline-text text-gray-100 uppercase tracking-widest md:text-8xl text-7xl mb-6;
 }
 
 a {
 	@apply transition-all duration-300;
+}
+
+p {
+	@apply max-w-[75ch] mx-auto text-2xl lg:text-3xl text-gray-100 tracking-wider;
 }
 
 .header {
@@ -46,4 +50,8 @@ a {
 	/* -webkit-text-stroke: 1px black; */
 	text-shadow: 5px 5px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
 		-1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.roller-coaster img {
+	@apply !w-screen;
 }
