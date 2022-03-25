@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: "Blueberry";
+	src: url("/fonts/blueberry.ttf");
+}
+
 html {
 	@apply scroll-smooth font-cartoon;
 }
@@ -10,12 +15,22 @@ body {
 	@apply overflow-x-hidden;
 }
 
+.trait {
+	@apply flex-center flex-col gap-4 text-center;
+}
+
 h1 {
-	@apply font-bold uppercase tracking-widest md:text-8xl text-7xl mb-6;
+	@apply font-bold tracking-widest lg:text-7xl text-6xl mb-6;
 }
 
 h2 {
-	@apply font-bold outline-text text-gray-100 uppercase tracking-widest md:text-8xl text-7xl mb-6;
+	@apply font-bold outline-text text-gray-100 tracking-widest md:text-6xl text-4xl mb-8;
+}
+
+h3 {
+	@apply font-bold text-gray-100 tracking-widest md:text-3xl text-2xl leading-none;
+	text-shadow: 0.1em 0.1em 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+		-1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 a {
@@ -23,7 +38,7 @@ a {
 }
 
 p {
-	@apply max-w-[75ch] mx-auto text-2xl lg:text-3xl text-gray-100 tracking-wider;
+	@apply max-w-[75ch] mx-auto text-lg md:text-2xl text-gray-100 tracking-wider;
 }
 
 .header {
@@ -54,4 +69,40 @@ p {
 
 .roller-coaster img {
 	@apply !w-screen;
+}
+
+.accordian {
+	@apply cursor-pointer p-4 rounded-xl shadow-sm text-gray-100 bg-orange-300 flex flex-row
+	justify-start items-center hover:scale-[1.005] transform transition-all duration-300 ease-in-out;
+
+	&-content {
+		@apply p-4 bg-orange-400 bg-opacity-75 rounded-xl flex flex-col;
+
+		p {
+			@apply max-w-none;
+			text-shadow: 0.05em 0.05em 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+				-1px 1px 0 #000, 1px 1px 0 #000;
+		}
+	}
+}
+
+.outline-text-sm {
+	text-shadow: 0.1em 0.1em 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+		-1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.member {
+	@apply flex-center relative flex-col text-center;
+
+	&-info {
+		@apply rounded-lg border-solid border-4 border-black bg-primary p-4 w-full;
+	}
+}
+
+.member-img {
+	@apply w-full mb-4;
+
+	img {
+		@apply border-4 w-full border-solid border-black rounded-lg drop-shadow-solid !important;
+	}
 }
