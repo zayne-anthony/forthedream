@@ -23,20 +23,32 @@ export default function Home() {
 			<main role='main' id='main'>
 				<section className='header'>
 					<div className='relative z-10 text-center'>
-						<h1 className='outline-text text-gray-100'>For The Dream</h1>
+						<h1 className='outline-text text-gray-300'>
+							For
+							<br className='lg:hidden block' />
+							The
+							<br className='lg:hidden block' />
+							Dream
+						</h1>
 						<div className='flex-center flex-row gap-4'>
-							<a href='' className='social-icon text-[#738ADB]'>
+							<a
+								href='https://discord.gg/hu3Rdxmk6P'
+								className='social-icon text-[#738ADB]'
+							>
 								<FaDiscord />
 							</a>
-							<a href='' className='social-icon text-[#1DA1F2]'>
+							<a
+								href='https://twitter.com/forthedreamnft'
+								className='social-icon text-[#1DA1F2]'
+							>
 								<FaTwitter />
 							</a>
 						</div>
 					</div>
-					<span className='header-img max-w-[14rem] lg:left-36 top-14 -left-20'>
+					<span className='header-img max-w-[18rem] md:block hidden lg:left-24 top-14 -left-20'>
 						<Image src={planet} alt='Planet' />
 					</span>
-					<span className='header-img max-w-[12rem] lg:left-64 xl:block hidden lg:top-[24]'>
+					<span className='header-img max-w-[12rem] lg:left-64 laptop:block hidden lg:top-[24]'>
 						<Image src={ufo} alt='UFO' />
 					</span>
 				</section>
@@ -48,17 +60,17 @@ export default function Home() {
 							<Image src={stars} alt='Stars' />
 						</span>
 						<div className='lg:grid-cols-2 lg:gap-x-12 lg:gap-y-36 gap-y-24 gap-x-8 grid'>
-							<span className='absolute top-[5%] lg:block hidden max-w-[24rem] right-16'>
+							{/* <span className='absolute top-[5%] lg:block hidden max-w-[24rem] right-16'>
 								<Image src={planetThree} alt='Planet' />
-							</span>
-							<span className='absolute md:block hidden bottom-1/4 max-w-[18rem] left-16'>
+							</span> */}
+							{/* <span className='absolute md:block hidden bottom-1/4 max-w-[18rem] left-16'>
 								<Image src={planetTwo} alt='Planet' />
-							</span>
-							<span className='absolute md:block hidden bottom-[20%] rotate-[12deg] max-w-[25rem] right-16'>
+							</span> */}
+							{/* <span className='absolute md:block hidden bottom-[20%] rotate-[12deg] max-w-[25rem] right-16'>
 								<Image src={blimp} alt='WAGMI Blimp' />
-							</span>
+							</span> */}
 							{/* Content */}
-							<div className='relative text-center'>
+							<div className='relative p-6 text-center border-4 border-white border-solid'>
 								<h2>Our Inner Dreamer</h2>
 								<p>
 									For the Dream consists of like-minded individuals searching
@@ -68,7 +80,7 @@ export default function Home() {
 									to be themselves; to chase their wildest dreams.
 								</p>
 							</div>
-							<div className='relative text-center'>
+							<div className='relative p-6 text-center border-4 border-white border-solid'>
 								<h2>For The Dream Hub</h2>
 								<p>
 									After 100% mint we are opening an IRL hub in New York City.
@@ -82,16 +94,19 @@ export default function Home() {
 
 							{/* Traits */}
 							<div className='lg:text-left relative flex flex-col items-start justify-center text-center'>
-								<h2>A Visual Experience on the Blockchain</h2>
-								<p>
-									Our collection consists of billions of possible visual
-									experiences directed by Oscar Llorens, who has worked with the
-									likes of Red Bull, Coca-Cola, Mercedes-Benz and the United
-									Nations. Each one curated with an imagination beyond your
-									wildest dreams. Become immersed with a multiverse filled with
-									traits such as the Stars of Odris, Gozai the Dragon and Vemzu
-									the Planet and many more of their unorthodox kind!
-								</p>
+								<div className='p-6 border-4 border-white border-solid'>
+									<h2>A Visual Experience on the Blockchain</h2>
+									<p>
+										Our collection consists of billions of possible visual
+										experiences directed by Oscar Llorens, who has worked with
+										the likes of Red Bull, Coca-Cola, Mercedes-Benz and the
+										United Nations. Each one curated with an imagination beyond
+										your wildest dreams. Become immersed with a multiverse
+										filled with traits such as the Stars of Odris, Gozai the
+										Dragon and Vemzu the Planet and many more of their
+										unorthodox kind!
+									</p>
+								</div>
 							</div>
 
 							<Traits />
@@ -115,13 +130,19 @@ export default function Home() {
 									position='Co-Founder & Creative Director'
 								/>
 
-								<Member img={flix} name='fLix' position='Dev Manager' />
+								<div className='lg:col-span-full lg:grid-cols-6 grid gap-8'>
+									<div className='lg:col-start-2 lg:col-span-2'>
+										<Member img={flix} name='fLix' position='Dev Manager' />
+									</div>
 
-								<Member
-									img={oscar}
-									name='Oscar Llorens'
-									position='Art Director'
-								/>
+									<div className='lg:col-span-2'>
+										<Member
+											img={oscar}
+											name='Oscar Llorens'
+											position='Art Director'
+										/>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -132,7 +153,7 @@ export default function Home() {
 				{/* FAQ */}
 				<section className='bg-primary pt-36 pb-24'>
 					<div className='flex-center container flex-col'>
-						<h2 className='outline-text text-white'>FAQ</h2>
+						<h2 className='outline-text text-gray-300'>About Us</h2>
 						<FAQ />
 					</div>
 				</section>

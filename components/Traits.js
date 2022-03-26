@@ -11,42 +11,42 @@ export default function Traits() {
 		<>
 			<div className='md:grid-cols-2 grid gap-12'>
 				<div className='trait'>
-					<div className='lg:max-w-[14rem] max-w-full mx-auto'>
+					<div className='lg:max-w-[9rem] max-w-full mx-auto'>
 						<Image src={vemzu} alt='Vemzu' />
 					</div>
 					<p>Vemzu</p>
 				</div>
 
 				<div className='trait'>
-					<div className='max-w-full'>
+					<div className='max-w-[7rem]'>
 						<Image src={ghost} alt='Ghost Blaze' />
 					</div>
 					<p>Ghost Blaze</p>
 				</div>
 
 				<div className='trait'>
-					<div className='max-w-[10rem] mx-auto'>
+					<div className='max-w-[7rem] mx-auto'>
 						<Image src={gozai} alt='Gozai' />
 					</div>
 					<p>Gozai</p>
 				</div>
 
 				<div className='trait'>
-					<div>
+					<div className='max-w-[15rem]'>
 						<Image src={twin} alt='Twin Sister Cascades' />
 					</div>
 					<p>Twin Sister Cascades</p>
 				</div>
 
 				<div className='trait'>
-					<div>
+					<div className='max-w-[8rem]'>
 						<Image src={stardust} alt='Stardust' />
 					</div>
 					<p>Stardust</p>
 				</div>
 
 				<div className='trait'>
-					<div>
+					<div className='max-w-[15rem]'>
 						<Image src={mosaic} alt='Mosaic Pillars' />
 					</div>
 					<p>Mosaic Pillars</p>
