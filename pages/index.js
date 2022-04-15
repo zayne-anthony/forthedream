@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Nav from "../components/layout/Nav";
 import FAQ from "../components/FAQ";
 import Traits from "../components/Traits";
 import Rollercoaster from "../components/Rollercoaster";
@@ -20,6 +21,7 @@ import oscar from "../public/imgs/oscar.jpg";
 export default function Home() {
 	return (
 		<>
+			<Nav />
 			<main role='main' id='main'>
 				<section className='header'>
 					<div className='relative z-10 text-center'>
@@ -48,14 +50,14 @@ export default function Home() {
 					<span className='header-img max-w-[18rem] md:block hidden lg:left-24 top-14 -left-20'>
 						<Image src={planet} alt='Planet' />
 					</span>
-					<span className='header-img max-w-[12rem] lg:left-64 laptop:block hidden lg:top-[24]'>
-						<Image src={ufo} alt='UFO' />
+					<span className='header-img max-w-[20rem] lg:left-48 laptop:block hidden lg:top-[24]'>
+						<Image src={blimp} alt='Blimp' />
 					</span>
 				</section>
 
 				{/* Content */}
 				<section className='bg-[url(/imgs/header-transition.jpg)] pt-[30%] pb-[65%] md:pb-[30%] flex-center gap-48 flex-col bg-cover bg-top relative'>
-					<div className='lg:px-0 container px-6'>
+					<div id='project' className='lg:px-0 container px-6'>
 						<span className='top-1/4 opacity-40 absolute max-w-full'>
 							<Image src={stars} alt='Stars' />
 						</span>
@@ -111,7 +113,10 @@ export default function Home() {
 
 							<Traits />
 
-							<div className='lg:grid-cols-3 col-span-full md:grid-cols-2 grid gap-8'>
+							<div
+								id='team'
+								className='lg:grid-cols-3 col-span-full md:grid-cols-2 grid gap-8'
+							>
 								<Member
 									img={shiv}
 									name='Shiv'
@@ -151,7 +156,7 @@ export default function Home() {
 				</section>
 
 				{/* FAQ */}
-				<section className='bg-primary pt-36 pb-24'>
+				<section id='about' className='bg-primary pt-36 pb-24'>
 					<div className='flex-center container flex-col'>
 						<h2 className='outline-text text-gray-300'>About Us</h2>
 						<FAQ />

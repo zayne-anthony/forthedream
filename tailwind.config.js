@@ -13,7 +13,8 @@ module.exports = {
 			},
 			fontFamily: {
 				mont: ["Montserrat", "sans-serif"],
-				cartoon: ["Blueberry", "cursive"],
+				cartoon: ["Blueberry"],
+				skrap: ["Skrapbook"],
 			},
 			dropShadow: {
 				solid: "0.05em 0.05em 0 black",

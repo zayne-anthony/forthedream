@@ -4,7 +4,12 @@
 
 @font-face {
 	font-family: "Blueberry";
-	src: url("/fonts/Blueberry-.ttf");
+	src: url("/fonts/blueberry.ttf");
+}
+
+@font-face {
+	font-family: "Skrapbook";
+	src: url("/fonts/Skrapbook.ttf");
 }
 
 html {
@@ -20,15 +25,15 @@ body {
 }
 
 h1 {
-	@apply font-bold tracking-widest lg:text-7xl text-6xl mb-6;
+	@apply lg:text-7xl mb-6 text-6xl font-bold tracking-widest;
 }
 
 h2 {
-	@apply font-bold outline-text text-red-300 tracking-widest md:text-6xl text-4xl mb-8;
+	@apply outline-text md:text-6xl mb-8 text-4xl font-bold !leading-[1.5] tracking-widest text-red-300;
 }
 
 h3 {
-	@apply font-bold text-gray-100 tracking-widest md:text-3xl text-2xl leading-none;
+	@apply md:text-3xl text-2xl font-bold leading-none tracking-widest text-gray-100;
 	text-shadow: 0.1em 0.1em 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
 		-1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -45,16 +50,16 @@ p {
 	@apply overflow-hidden bg-cover justify-center items-center flex flex-col bg-no-repeat bg-right-bottom h-screen relative bg-[url(/imgs/header-bg.jpg)];
 
 	&-img {
-		@apply absolute drop-shadow-md;
+		@apply drop-shadow-md absolute;
 	}
 }
 
 .flex-center {
-	@apply flex justify-center items-center;
+	@apply flex items-center justify-center;
 }
 
 .social-icon {
-	@apply text-5xl hover:scale-110 drop-shadow-solid;
+	@apply hover:scale-110 drop-shadow-solid text-5xl;
 
 	svg {
 		@apply stroke-[0.35em] stroke-black;
@@ -76,7 +81,7 @@ p {
 	justify-start items-center hover:scale-[1.005] transform transition-all duration-300 ease-in-out;
 
 	&-content {
-		@apply p-4 bg-red-500 bg-opacity-75 rounded-xl flex flex-col;
+		@apply rounded-xl flex flex-col p-4 bg-red-300 bg-opacity-75;
 
 		p {
 			@apply max-w-none;
@@ -92,10 +97,10 @@ p {
 }
 
 .member {
-	@apply flex relative flex-col text-center;
+	@apply relative flex flex-col text-center;
 
 	&-info {
-		@apply rounded-lg lg:h-full flex-col flex-center border-solid border-4 border-black bg-primary p-4 w-full;
+		@apply lg:h-full flex-center bg-primary flex-col w-full p-4 border-4 border-black border-solid rounded-lg;
 	}
 }
 
