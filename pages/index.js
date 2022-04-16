@@ -50,9 +50,9 @@ export default function Home() {
 					<span className='header-img max-w-[18rem] md:block hidden lg:left-24 top-14 -left-20'>
 						<Image src={planet} alt='Planet' />
 					</span>
-					<span className='header-img max-w-[20rem] lg:left-48 laptop:block hidden lg:top-[24]'>
+					{/* <span className='header-img max-w-[20rem] lg:left-48 laptop:block hidden lg:top-[24]'>
 						<Image src={blimp} alt='Blimp' />
-					</span>
+					</span> */}
 				</section>
 
 				{/* Content */}
